@@ -5,8 +5,10 @@ This is a command line program which finds three longest [palindromes](https://e
 
 - Build the source code using [gradle](https://gradle.org). 
   In the project directory: `./gradlew build`.
-- Unpack created `tar` or `zip` archive, e.g. `tar -xzf build/distributions/longest-palindromes-0.0.tar`
-- Run shell or batch script in the `bin` directory, e.g. `cd ./longest-palindromes-0.0/bin && ./longest-palindromes "hello"`
+- Unpack created `tar` or `zip` archive, 
+  e.g. `tar -xzf build/distributions/longest-palindromes-0.0.tar`.
+- Run shell or batch script in the `bin` directory, 
+  e.g. `cd ./longest-palindromes-0.0/bin && ./longest-palindromes "hello"`.
 
 
 ### Implementation notes

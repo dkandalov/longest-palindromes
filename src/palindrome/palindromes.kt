@@ -10,9 +10,11 @@ data class Palindrome(val value: String, val range: IntRange) {
 fun findLongestPalindromes(s: String, maxAmount: Int = 3, minPalindromeSize: Int = 2): List<Palindrome> {
     val result = ArrayList<Palindrome>()
     s.allSubstrings()
-        .filter { it.first.length >= minPalindromeSize }
+        .filter { (substring, _) ->
+            substring.length >= minPalindromeSize && substring.isPalindrome()
+        }
         .forEach { (substring, range) ->
-            if (substring.isPalindrome() && result.none { it.range.contains(range) }) {
+            if (result.none { it.range.contains(range) }) {
                 result.add(Palindrome(substring, range))
             }
         }
